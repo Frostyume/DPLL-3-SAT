@@ -23,9 +23,9 @@ DPLL算法，全称为Davis-Putnam-Logemann-Loveland算法，是一种完备的�
 (4)返回结果：如果所有子句都被满足，返回成功；如果无法满足，则返回无解。
 
 ### 数据结构  
-(1)布尔公式结构： 
-`Clause`：用`vector<int>`表示一个子句，其中的整型表示布尔变量及其符号（正数表示真，负数表示假）。  
-`Formula`：用`vector<Clause>`表示整个布尔公式，即多个子句的集合。  
+(1)布尔公式结构：       
+`Clause`：用`vector<int>`表示一个子句，其中的整型表示布尔变量及其符号（正数表示真，负数表示假）。      
+`Formula`：用`vector<Clause>`表示整个布尔公式，即多个子句的集合。       
 (2)变量赋值管理：  
 `vector<int> assignment`：用于存储每个变量的赋值状态（-1表示未赋值，0表示假，1表示真）。   
 `unordered_set<int> unassigned`：用于跟踪未赋值的变量集合，方便快速选择未赋值变量。   
