@@ -22,14 +22,22 @@ DPLL算法，全称为Davis-Putnam-Logemann-Loveland算法，是一种完备的�
 (3)单位传播：在每次递归中检查公式的子句。如果某个子句中只有一个未赋值的变量，该变量必须取值使得该子句为真；
 (4)返回结果：如果所有子句都被满足，返回成功；如果无法满足，则返回无解。
 
-### 数据结构
-(1)布尔公式结构：
-`Clause`：用`vector<int>`表示一个子句，其中的整型表示布尔变量及其符号（正数表示真，负数表示假）。
-`Formula`：用`vector<Clause>`表示整个布尔公式，即多个子句的集合。
-(2)变量赋值管理：
-`vector<int> assignment：`用于存储每个变量的赋值状态（-1表示未赋值，0表示假，1表示真）。
-`unordered_set<int> unassigned`：用于跟踪未赋值的变量集合，方便快速选择未赋值变量。
-(3)赋值栈：
-`vector<int> localImplicitAssignments`：记录隐式赋值，用于回溯时撤销。
-`vector<int> localExplicitAssignments`：记录显式赋值，同样用于回溯。
+### 数据结构  
+(1)布尔公式结构： 
+`Clause`：用`vector<int>`表示一个子句，其中的整型表示布尔变量及其符号（正数表示真，负数表示假）。  
+`Formula`：用`vector<Clause>`表示整个布尔公式，即多个子句的集合。  
+(2)变量赋值管理：  
+`vector<int> assignment`：用于存储每个变量的赋值状态（-1表示未赋值，0表示假，1表示真）。   
+`unordered_set<int> unassigned`：用于跟踪未赋值的变量集合，方便快速选择未赋值变量。   
+(3)赋值栈：  
+`vector<int> localImplicitAssignments`：记录隐式赋值，用于回溯时撤销。  
+`vector<int> localExplicitAssignments`：记录显式赋值，同样用于回溯。  
+
+### 使用方法
+#### 解题
+testData1/2/3.txt是三个测试数据，保证一定至少存在一个解。   
+在main.cpp中修改文件路径为自己的路径后编译运行即可得到输出
+#### 验证 
+在verifier.py中，先输入所有信息(变量数n, 表达式数m, 以及所有表达式)，再输入所有1-0串即可得到结果
+
 
