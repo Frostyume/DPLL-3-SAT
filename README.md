@@ -9,5 +9,5 @@ $$X_2 \cup \overline{X_3} \cup X_4$$
 $$X_2 \cup X_3 \cup X_4$$
 $$X_2 \cup X_3 \cup \overline{X_4}$$
 
-答案一:X_1,X_2为true,X_3,X_4 自由选取。
-答案二:X_1,X_3任意，X_2为true，X_4为false。
+答案一: $X_1$,$X_2$为true,$X_3$,$X_4$自由选取。
+答案二:$X_1$,$X_3$任意，$X_2$为true，$X_4$为false。
